@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
+using TMPro;
 
 /// <summary>
 /// Spritesheet for Flappy Bird found here: http://www.spriters-resource.com/mobile_phone/flappybird/sheet/59537/
@@ -15,11 +17,12 @@ public class FlappyScript : MonoBehaviour
     public Collider2D restartButtonGameCollider;
     public float VelocityPerJump = 3;
     public float XSpeed = 1;
+    public TMP_Text HighScore; 
 
     // Use this for initialization
     void Start()
     {
-
+        SetHighestScore();
     }
 
     FlappyYAxisTravelState flappyYAxisTravelState;
@@ -112,6 +115,7 @@ public class FlappyScript : MonoBehaviour
     void BoostOnYAxis()
     {
         GetComponent<Rigidbody2D>().velocity = new Vector2(0, VelocityPerJump);
+        GetComponent<AudioSource>().volume = 1f;
         GetComponent<AudioSource>().PlayOneShot(FlyAudioClip);
     }
 
@@ -155,6 +159,7 @@ public class FlappyScript : MonoBehaviour
         {
             if (col.gameObject.tag == "Pipeblank") //pipeblank is an empty gameobject with a collider between the two pipes
             {
+                GetComponent<AudioSource>().volume = 0.5f;
                 GetComponent<AudioSource>().PlayOneShot(ScoredAudioClip);
                 ScoreManagerScript.Score++;
             }
@@ -176,11 +181,24 @@ public class FlappyScript : MonoBehaviour
         }
     }
 
+    void SetHighestScore()
+    {
+        var score = PlayerPrefs.GetInt("Score");
+        if(score < ScoreManagerScript.Score)
+        {
+            PlayerPrefs.SetInt("Score", ScoreManagerScript.Score);
+            PlayerPrefs.Save();
+        }
+        HighScore.text = "Highscore: " + score;
+    }
+
     void FlappyDies()
     {
         GameStateManager.GameState = GameState.Dead;
         DeathGUI.SetActive(true);
+        GetComponent<AudioSource>().volume = 1f;
         GetComponent<AudioSource>().PlayOneShot(DeathAudioClip);
+        SetHighestScore();
     }
 
 }
