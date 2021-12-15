@@ -1366,11 +1366,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 955438021}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 62bc49259398459448a4e091862a100b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RandomBackgroundScriptMaster: {fileID: 2105998853}
+  PictureValue: 0
+  SetMaster: 0
   Backgrounds:
   - {fileID: 21300076, guid: aab37b51d898f764abaf04d75f0eb322, type: 3}
   - {fileID: 21300078, guid: aab37b51d898f764abaf04d75f0eb322, type: 3}
@@ -2013,11 +2016,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1614148478}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 62bc49259398459448a4e091862a100b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RandomBackgroundScriptMaster: {fileID: 2105998853}
+  PictureValue: 0
+  SetMaster: 0
   Backgrounds:
   - {fileID: 21300076, guid: aab37b51d898f764abaf04d75f0eb322, type: 3}
   - {fileID: 21300078, guid: aab37b51d898f764abaf04d75f0eb322, type: 3}
@@ -2490,6 +2496,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62bc49259398459448a4e091862a100b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RandomBackgroundScriptMaster: {fileID: 0}
+  PictureValue: 0
+  SetMaster: 0
   Backgrounds:
   - {fileID: 21300076, guid: aab37b51d898f764abaf04d75f0eb322, type: 3}
   - {fileID: 21300078, guid: aab37b51d898f764abaf04d75f0eb322, type: 3}
