@@ -7,8 +7,9 @@ public class RandomBackgroundScript : MonoBehaviour {
 	public int PictureValue = 0;
 	public bool SetMaster = false;
 	// Use this for initialization
-	void Start () {
-		if (RandomBackgroundScriptMaster != null)
+	void Start () 
+	{
+		if (RandomBackgroundScriptMaster == null)
 		{
 			PictureValue = Random.Range(0, Backgrounds.Length);
 			(GetComponent<Renderer>() as SpriteRenderer).sprite = Backgrounds[PictureValue];
