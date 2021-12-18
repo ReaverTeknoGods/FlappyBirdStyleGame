@@ -737,7 +737,7 @@ Animator:
   m_GameObject: {fileID: 703414529}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 908c2c3961369114e83601d073bbfcfd, type: 2}
+  m_Controller: {fileID: 9100000, guid: e71cbcb48108fa547b28e65cede43789, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -806,7 +806,7 @@ Transform:
   m_GameObject: {fileID: 703414529}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.73816, y: 0.38933, z: -3.96}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -850,7 +850,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.13087887
+  m_Radius: 1.5
 --- !u!50 &703414535
 Rigidbody2D:
   serializedVersion: 4
